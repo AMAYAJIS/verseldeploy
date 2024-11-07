@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* global styling */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", serif;
+}
+body {
+  background: #000;
+}
+h1,
+h4,
+p,
+a {
+  /* removing underlines for links */
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  /* remove unorder list dots */
+  list-style-type: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  background: #ffd1dc;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 12px 32px;
+  border: 1px solid #ff6ec7;
+  font-weight: 600;
+  cursor: pointer;
+  /* The cursor: pointer; style in the .btn class is used to change the appearance of the mouse pointer when
+   it hovers over the button. Specifically, it changes the cursor to a "pointer" (usually a hand icon), which
+    visually indicates to users that the button is clickable. */
+}
+.btn-light {
+  background: transparent;
+  border: 1px solid #ff6ec7;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 32px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  width: 94%;
+  height: 90px;
+  z-index: 10;
+}
+.navbar {
+  display: flex;
+}
+.navbar li {
+  padding: 0 1rem;
+  /* (left right) (top bottom) */
+}
+.navbar li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.hamgburger-menu {
+  /* color: #fff; */
+}
+
+/* 1040px means the screen or container is 1040 pixels wide, which is slightly wider than the typical tablet width but narrower
+ than most desktop monitors. */
+@media screen and (max-width: 1040px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  /* for making these navbar items (links) to hidden by moving left */
+  .navbar.active {
+    left: -100%;
+  }
+  .navbar li {
+    padding: 1rem 0;
+  }
+  .navbar li a {
+    font-size: 2rem;
+  }
+}
